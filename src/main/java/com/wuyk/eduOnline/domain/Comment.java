@@ -1,7 +1,12 @@
 package com.wuyk.eduOnline.domain;
 
 
-public class Comment {
+import java.io.Serializable;
+
+/**
+ * 评论实体类
+ */
+public class Comment implements Serializable {
 
   private Integer id;
   private String content;
@@ -10,7 +15,7 @@ public class Comment {
   private String name;
   private double point;
   private Integer up;
-  private java.sql.Timestamp createTime;
+  private java.util.Date createTime;
   private Integer orderId;
   private Integer videoId;
 
@@ -78,11 +83,11 @@ public class Comment {
   }
 
 
-  public java.sql.Timestamp getCreateTime() {
+  public java.util.Date getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(java.util.Date createTime) {
     this.createTime = createTime;
   }
 

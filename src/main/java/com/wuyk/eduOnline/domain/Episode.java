@@ -1,7 +1,12 @@
 package com.wuyk.eduOnline.domain;
 
 
-public class Episode {
+import java.io.Serializable;
+
+/**
+ * 集实体类
+ */
+public class Episode  implements Serializable {
 
   private Integer id;
   private String title;
@@ -10,7 +15,7 @@ public class Episode {
   private String coverImg;
   private Integer videoId;
   private String summary;
-  private java.sql.Timestamp createTime;
+  private java.util.Date createTime;
   private Integer chapterId;
 
 
@@ -77,11 +82,11 @@ public class Episode {
   }
 
 
-  public java.sql.Timestamp getCreateTime() {
+  public java.util.Date getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(java.util.Date createTime) {
     this.createTime = createTime;
   }
 

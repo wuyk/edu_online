@@ -38,7 +38,6 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public int save(Video video) {
         int rows = videoMapper.save(video);
-        System.out.println("保存对象的id= "+video.getId());
 
         return rows;
     }

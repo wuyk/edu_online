@@ -1,11 +1,11 @@
 package com.wuyk.eduOnline.controller;
 
 import com.wuyk.eduOnline.config.WeChatConfig;
+import com.wuyk.eduOnline.domain.JsonData;
 import com.wuyk.eduOnline.mapper.VideoMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 
 
 @RestController
@@ -18,20 +18,32 @@ public class TestController {
 		return "hello xdclass.net777";
 	}
 
-	@Resource
+
+
+	@Autowired
 	private WeChatConfig weChatConfig;
 
 	@RequestMapping("test_config")
-	public String testConfig(){
+	public JsonData testConfig(){
+
 		System.out.println(weChatConfig.getAppId());
-		return "hello xdclass.net";
+		return JsonData.buildSuccess(weChatConfig.getAppId());
 	}
 
-	@Resource
+
+
+	@Autowired
 	private VideoMapper videoMapper;
 
 	@RequestMapping("test_db")
 	public Object testDB(){
+
+
 		return videoMapper.findAll();
 	}
+
+
+
+
+
 }

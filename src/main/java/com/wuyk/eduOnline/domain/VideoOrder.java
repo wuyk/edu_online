@@ -1,14 +1,26 @@
 package com.wuyk.eduOnline.domain;
 
 
-public class VideoOrder {
+import java.io.Serializable;
+
+/**
+ * 订单表
+ */
+public class VideoOrder implements Serializable {
 
   private Integer id;
   private String openid;
+
   private String outTradeNo;
+  /**
+   * 0表示未支付，1表示已经支付
+   */
   private Integer state;
-  private java.sql.Timestamp createTime;
-  private java.sql.Timestamp notifyTime;
+  private java.util.Date createTime;
+  private java.util.Date notifyTime;
+  /**
+   *分为单位
+   */
   private Integer totalFee;
   private String nickname;
   private String headImg;
@@ -56,20 +68,20 @@ public class VideoOrder {
   }
 
 
-  public java.sql.Timestamp getCreateTime() {
+  public java.util.Date getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(java.util.Date createTime) {
     this.createTime = createTime;
   }
 
 
-  public java.sql.Timestamp getNotifyTime() {
+  public java.util.Date getNotifyTime() {
     return notifyTime;
   }
 
-  public void setNotifyTime(java.sql.Timestamp notifyTime) {
+  public void setNotifyTime(java.util.Date notifyTime) {
     this.notifyTime = notifyTime;
   }
 

@@ -1,7 +1,12 @@
 package com.wuyk.eduOnline.domain;
 
 
-public class Video {
+import java.io.Serializable;
+
+/**
+ * 视频表
+ */
+public class Video implements Serializable {
 
   private Integer id;
   private String title;
@@ -9,7 +14,7 @@ public class Video {
   private String coverImg;
   private Integer viewNum;
   private Integer price;
-  private java.sql.Timestamp createTime;
+  private java.util.Date createTime;
   private Integer online;
   private Double point;
 
@@ -68,11 +73,11 @@ public class Video {
   }
 
 
-  public java.sql.Timestamp getCreateTime() {
+  public java.util.Date getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(java.util.Date createTime) {
     this.createTime = createTime;
   }
 

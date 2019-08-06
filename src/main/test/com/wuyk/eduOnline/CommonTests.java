@@ -23,7 +23,7 @@ public class CommonTests {
     @Test
     public void testCheckJwt() {
         String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3dXlrIiwiaWQiOjExLCJuYW1lIjoidGVzdCIsImltZyI6Ind3dy4xMi5wbmciLCJpYXQiOjE1NjMyODc4ODAsImV4cCI6MTU2Mzg5MjY4MH0.mb-GdOi5KasL9zbQkB-e0TWHEbGEpm3rDN0ioVIyG7E";
-        Claims claims = JwtUtils.checkJwt(token);
+        Claims claims = JwtUtils.checkJWT(token);
         if (claims != null) {
             String name = (String) claims.get("name");
             String img = (String) claims.get("img");

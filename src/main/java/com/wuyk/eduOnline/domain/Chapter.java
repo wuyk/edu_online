@@ -1,13 +1,18 @@
 package com.wuyk.eduOnline.domain;
 
 
-public class Chapter {
+import java.io.Serializable;
+
+/**
+ * 章实体类
+ */
+public class Chapter implements Serializable {
 
   private Integer id;
   private Integer videoId;
   private String title;
   private Integer ordered;
-  private java.sql.Timestamp createTime;
+  private java.util.Date createTime;
 
 
   public Integer getId() {
@@ -46,11 +51,11 @@ public class Chapter {
   }
 
 
-  public java.sql.Timestamp getCreateTime() {
+  public java.util.Date getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(java.util.Date createTime) {
     this.createTime = createTime;
   }
 
