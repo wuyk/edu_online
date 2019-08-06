@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.wuyk</groupId>
-    <artifactId>video_edu_online</artifactId>
+    <artifactId>edu_online</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>video_edu_online</name>
+    <name>edu_online</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -70,16 +70,12 @@
             <version>4.1.0</version>
         </dependency>
 
-
         <!-- JWT相关 -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.7.0</version>
         </dependency>
-
-
-
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
